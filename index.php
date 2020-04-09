@@ -7,6 +7,10 @@ $leaf = new Leaf\Core\Leaf;
 $response = new Leaf\Core\Http\Response;
 $request = new Leaf\Core\Http\Request;
 
+$leaf->get('/', function() use ($response) {
+	$response->respond(["message" => "Countries African API"]);
+});
+
 $leaf->get('/countries', function() use ($response, $database) {
 	$countries = $database->select("countries")->fetchAll();
 	$response->respond($countries);

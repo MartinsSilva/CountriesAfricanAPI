@@ -1,0 +1,9 @@
+.DS_Store
+nbproject
+vendor
+cache
+views
+veins.php
+ideas
+ideaForComponent.md
+component
